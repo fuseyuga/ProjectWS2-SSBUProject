@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スマブラ対戦記録</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>スマブラ対戦記録ノート</h1>
+        
+        <form id="record-form">
+            <div class="form-group">
+                <label for="opponent">相手キャラ</label>
+                <input type="text" id="opponent" placeholder="例: ジョーカー, ホムヒカ" required>
+            </div>
+
+            <div class="form-group">
+                <label>勝敗</label>
+                <div class="radio-group">
+                    <label class="radio-btn win">
+                        <input type="radio" name="result" value="WIN" checked> WIN
+                    </label>
+                    <label class="radio-btn lose">
+                        <input type="radio" name="result" value="LOSE"> LOSE
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="details">対戦内容・相手の対策</label>
+                <textarea id="details" rows="3" placeholder="相手の癖、意識した立ち回りなど"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="reflection">反省点・次やること</label>
+                <textarea id="reflection" rows="3" placeholder="次回の対戦で改善することなど"></textarea>
+            </div>
+
+            <button type="submit" id="save-btn">対戦を記録する</button>
+        </form>
+
+        <h2>対戦履歴</h2>
+        <div id="history-list"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
